@@ -1,4 +1,4 @@
-export const enum ENVIRONMENT {
+export enum ENVIRONMENT {
   LOCAL = "LOCAL",
   DEVELOP = "DEVELOP",
   STAGING = "STAGING",

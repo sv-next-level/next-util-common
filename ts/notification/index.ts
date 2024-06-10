@@ -1,13 +1,7 @@
 export * from "./email";
 
-export enum OTP {
-  TWO_FACTOR_AUTHENTICATION = "Two Factor Authentication",
-}
-
-export enum PASSWORD {
-  FORGOT = "Forgot Password",
-  CREATE = "Create Password",
-  GENERATE = "Generate Password",
+export enum METHOD {
+  EMAIL = "EMAIL",
 }
 
 export enum TYPE {
@@ -15,6 +9,11 @@ export enum TYPE {
   PASSWORD = "PASSWORD",
 }
 
-export enum METHOD {
-  SMS = "SMS",
+export enum OTP {
+  TWO_FACTOR_AUTHENTICATION = "Two Factor Authentication",
+}
+
+export enum PASSWORD {
+  CREATE = "Create Password",
+  FORGOT = "Forgot Password",
 }

@@ -1,4 +1,4 @@
-import { OTP, PASSWORD } from ".";
+import { OTP, PASSWORD } from "./index";
 
 export enum EMAIL_VENDOR {
   SMTP_EMAIL = "SMTP Email",

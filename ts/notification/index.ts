@@ -17,3 +17,9 @@ export enum PASSWORD {
   CREATE = "Create Password",
   FORGOT = "Forgot Password",
 }
+
+export const EMAIL_ACTION = [
+  PASSWORD.CREATE,
+  PASSWORD.FORGOT,
+  OTP.TWO_FACTOR_AUTHENTICATION,
+];

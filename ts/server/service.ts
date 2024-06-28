@@ -1,5 +1,7 @@
 export enum SERVICE {
   TRADE_DATA = "next-trade-data",
+  UTIL_NESTJS = "next-util-nestjs",
+  UTIL_NEXTJS = "next-util-nextjs",
   TRADE_ORDER = "next-trade-order",
   USER_SERVICE = "next-user-service",
   RELAY_SERVICE = "next-relay-service",

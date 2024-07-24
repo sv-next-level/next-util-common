@@ -94,17 +94,17 @@ export function parse(str: string): number {
       "Value provided to ms.parse() must be a string with length between 1 and 99."
     );
   }
-  const match =
-    /^(?<value>-?(?:\d+)?\.?\d+) *(?<type>milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
-      str
-    );
+  const regex: RegExp =
+    /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i;
+
+  const match: RegExpExecArray | null = regex.exec(str);
   // Named capture groups need to be manually typed today.
   // https://github.com/microsoft/TypeScript/issues/32098
   const groups = match?.groups as { value: string; type?: string } | undefined;
   if (!groups) {
     return NaN;
   }
-  const n = parseFloat(groups.value);
+  const n: number = parseFloat(groups.value);
   const type = (groups.type || "ms").toLowerCase() as Lowercase<Unit>;
   switch (type) {
     case "years":

@@ -12,5 +12,5 @@ export function wait(duration: number) {
 
   if (duration <= 0) throw Error("duration must be positive number.");
 
-  return new Promise((resolve): number => setTimeout(resolve, duration));
+  return new Promise((resolve) => setTimeout(resolve, duration));
 }

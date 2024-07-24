@@ -1,5 +1,5 @@
-import lowerCase from "./lower-case";
-import specials from "./specials";
+import lowerCase from "@/common/functions/title/lower-case";
+import specials from "@/common/functions/title/specials";
 
 const word = "[^\\s'’\\(\\)!?;:\"-]";
 const regex = new RegExp(
@@ -10,7 +10,7 @@ const regex = new RegExp(
 const convertToRegExp = (specials: string[]) =>
   specials.map((s: string) => [new RegExp(`\\b${s}\\b`, "gi"), s]);
 
-function parseMatch(match) {
+function parseMatch(match: string) {
   const firstCharacter = match[0];
 
   // test first character

@@ -14,7 +14,7 @@ export const API = {
     },
     tasks: {
       meta: {
-        description: "All tasks related to Task Service API",
+        description: "tasks creation and reading API",
         name: "tasks",
         path: "/api/v1/tasks",
       },
@@ -27,7 +27,7 @@ export const API = {
       },
       taskId: {
         meta: {
-          description: "Specific tasks related to Task Service API",
+          description: "Specific tasks updation API",
           name: ":taskId",
           path: "/api/v1/tasks/:taskId",
         },
@@ -35,9 +35,21 @@ export const API = {
           method: {
             PUT: METHOD.PUT,
             PATCH: METHOD.PATCH,
-            DELETE: METHOD.DELETE,
           },
           getPath: (taskId: string): string => `/api/v1/tasks/${taskId}`,
+        },
+      },
+      taskIds: {
+        meta: {
+          description: "Multiple tasks deletion API",
+          name: ":taskIds",
+          path: "/api/v1/tasks/:taskIds",
+        },
+        data: {
+          method: {
+            DELETE: METHOD.DELETE,
+          },
+          getPath: (taskIds: string[]): string => `/api/v1/tasks/${taskIds}`,
         },
       },
     },

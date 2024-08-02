@@ -26,6 +26,34 @@ export const API = {
         getPath: (): string => `/api/v1/tasks`,
       },
       taskId: {
+        status: {
+          meta: {
+            description: "Specific tasks status updation API",
+            name: "status",
+            path: "/api/v1/tasks/:taskId/status",
+          },
+          data: {
+            method: {
+              PATCH: METHOD.PATCH,
+            },
+            getPath: (taskId: string): string =>
+              `/api/v1/tasks/${taskId}/status`,
+          },
+        },
+        priority: {
+          meta: {
+            description: "Specific tasks priority updation API",
+            name: "priority",
+            path: "/api/v1/tasks/:taskId/priority",
+          },
+          data: {
+            method: {
+              PATCH: METHOD.PATCH,
+            },
+            getPath: (taskId: string): string =>
+              `/api/v1/tasks/${taskId}/priority`,
+          },
+        },
         meta: {
           description: "Specific tasks updation API",
           name: ":taskId",
@@ -34,7 +62,6 @@ export const API = {
         data: {
           method: {
             PUT: METHOD.PUT,
-            PATCH: METHOD.PATCH,
           },
           getPath: (taskId: string): string => `/api/v1/tasks/${taskId}`,
         },

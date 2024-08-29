@@ -1,13 +1,13 @@
 // Axios methods
 export enum METHOD {
-  GET = "GET",
   DELETE = "DELETE",
+  GET = "GET",
   HEAD = "HEAD",
+  LINK = "LINK",
   OPTIONS = "OPTIONS",
+  PATCH = "PATCH",
   POST = "POST",
   PUT = "PUT",
-  PATCH = "PATCH",
   PURGE = "PURGE",
-  LINK = "LINK",
   UNLINK = "UNLINK",
 }

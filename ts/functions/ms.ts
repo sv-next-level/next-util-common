@@ -56,6 +56,7 @@ interface Options {
 /**
  * Parse or format the given value.
  *
+ * @link https://github.com/vercel/ms
  * @param value - The string or number to convert
  * @param options - Options for the conversion
  * @throws Error if `value` is not a non-empty string or a number
